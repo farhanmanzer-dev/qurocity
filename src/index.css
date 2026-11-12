@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+  --color-main: #4a00e1;
+  --color-primary: #4a00e1;
+  --color-secondary: #8d3dfa;
+  --color-ternary: #00bcf2;
+}
+
 * {
   margin: 0;
   padding: 0;

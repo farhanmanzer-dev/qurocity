@@ -24,7 +24,7 @@ const asianLanguages = [
 
 const ForeignLang = () => {
   return (
-    <div className="foreignLang-content">
+    <section id="languages" className="foreignLang-content">
       <div className="container">
         <div className="foreignLang-content-wrapper">
           <div className="foreignLang-box-title">
@@ -65,7 +65,7 @@ const ForeignLang = () => {
             </div>
             <div className="foreignLang-box-right" data-aos="fade-left">
               <div className="circle">
-                <img src={rounded} alt="circle" />
+                <img src={rounded} alt="circle" className="spin-slow" />
                 <div className="flag">
                   <img src={flag} alt="flag" />
                 </div>
@@ -74,7 +74,7 @@ const ForeignLang = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

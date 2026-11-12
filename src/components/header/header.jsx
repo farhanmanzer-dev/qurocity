@@ -4,7 +4,11 @@ import { FcReading } from "react-icons/fc";
 import { GoQuote } from "react-icons/go";
 import { IoMdClose } from "react-icons/io"; // Close icon
 import "./style.css";
-import Headroom from "react-headroom";
+import HeadroomModule from "react-headroom";
+
+// react-headroom is CommonJS; under Vite 8 the default import can arrive
+// wrapped as { default: Component }, so unwrap it.
+const Headroom = HeadroomModule.default ?? HeadroomModule;
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,8 +38,6 @@ const Header = () => {
         <div className="header-content-wrapper">
           <div
             className="header-logo"
-            data-aos="zoom-in"
-            data-aos-duration="2000"
           >
             <a href="/">
               <img src={logo} alt="logo" />
@@ -54,23 +56,23 @@ const Header = () => {
           {/* Sidenav */}
           <div className={`sidenav ${isOpen ? "open" : ""}`}>
             <ul>
-              <li data-aos="zoom-in">
+              <li>
                 <a href="#">Languages</a>
               </li>
-              <li data-aos="zoom-in">
+              <li>
                 <a href="#">Blogs</a>
               </li>
-              <li data-aos="zoom-in">
+              <li>
                 <a href="#">Become a Tutor</a>
               </li>
-              <li data-aos="zoom-in">
+              <li>
                 <a href="#">About us</a>
               </li>
-              <li data-aos="zoom-in">
+              <li>
                 <a href="#">Contact us</a>
               </li>
             </ul>
-            <div className="header-portal custom-btn" data-aos="zoom-in">
+            <div className="header-portal custom-btn">
               <FcReading />
               <span>Student Portal</span>
             </div>

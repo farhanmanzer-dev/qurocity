@@ -49,7 +49,7 @@ const ReviewsSlider = () => {
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
   return (
-    <div className="reviews-slider-wrapper">
+    <section id="reviews" className="reviews-slider-wrapper">
       <div className="container">
         <div className="reviews-slider-content">
           <h1 data-aos="fade-down">What our students have to say about us</h1>
@@ -109,7 +109,7 @@ const ReviewsSlider = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

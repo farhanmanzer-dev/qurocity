@@ -12,12 +12,15 @@ import GlobalDream from "../components/home/globalDream";
 import Faq from "../components/home/faq";
 import ReviewsSlider from "../components/home/reviewSlider";
 import Linguistics from "../components/home/linguistics";
+import Marquee from "../components/home/marquee";
+import "../components/home/polish.css";
 
 const Home = () => {
   return (
     <Layout>
       <BannerSection />
       <Course />
+      <Marquee />
       <FeatureSection />
       <Keybenefit />
       <Linguistics />

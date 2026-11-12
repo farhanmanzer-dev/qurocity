@@ -1,21 +1,16 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+import { useGSAP } from "@gsap/react";
 import App from "./App.jsx";
 import "./index.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
+gsap.registerPlugin(ScrollTrigger, SplitText, useGSAP);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
   </StrictMode>
 );
-AOS.init({
-  offset: 0,
-  duration: 2000,
-  easing: "ease",
-  once: true,
-  anchorPlacement: "top-bottom",
-  mirror: true,
-  delay: 1000,
-});

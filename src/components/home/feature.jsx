@@ -4,14 +4,14 @@ import "./style.css";
 
 const FeatureSection = () => {
   return (
-    <div className="feature-content">
+    <section id="featured" className="feature-content">
       <div className="container">
         <div className="feature-content-wrapper">
           <h1 data-aos="fade-down">Featured in Top Columns</h1>
           <FeatureBox />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

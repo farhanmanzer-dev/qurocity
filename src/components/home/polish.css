@@ -1,0 +1,573 @@
+/* =================================================================
+   Landing page visual polish (loaded after style.css / motion.css)
+   ================================================================= */
+
+:root {
+  --ink: #000949;
+  --muted: #6d7287;
+  --accent: #ff4141;
+  --surface: #f5f6fc;
+  --card-shadow: 0 1px 2px rgba(0, 9, 73, 0.04), 0 18px 40px -24px rgba(0, 9, 73, 0.25);
+  --radius-lg: 28px;
+}
+
+html {
+  scroll-behavior: auto;
+}
+body {
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+p {
+  line-height: 1.7;
+}
+
+/* ---------- hero accent ---------- */
+.hero-accent {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+.hero-word-accent {
+  color: var(--accent);
+}
+.hero-swash {
+  position: absolute;
+  left: 0;
+  bottom: -0.06em;
+  width: 100%;
+  height: 0.32em;
+  overflow: visible;
+  pointer-events: none;
+}
+.hero-swash path {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 320;
+  opacity: 0.85;
+}
+
+/* ---------- section headings ---------- */
+.course-content-wrapper > h1,
+.feature-content-wrapper > h1,
+.keybenefit-content-wrapper > h1,
+.linguistics-content > h1,
+.wonder-content-wrapper > h1,
+.language-content-wrapper > h1,
+.standout-content-wrapper > h1,
+.foreignLang-box-title h1,
+.global-dream-content-wrapper > h1,
+.faq-content-wrapper > h1,
+.reviews-slider-content > h1 {
+  font-size: clamp(1.9rem, 3.4vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-align: center;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Gradient rule under each section heading */
+.course-content-wrapper > h1::after,
+.feature-content-wrapper > h1::after,
+.keybenefit-content-wrapper > h1::after,
+.linguistics-content > h1::after,
+.wonder-content-wrapper > h1::after,
+.language-content-wrapper > h1::after,
+.standout-content-wrapper > h1::after,
+.global-dream-content-wrapper > h1::after,
+.faq-content-wrapper > h1::after,
+.reviews-slider-content > h1::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 18px auto 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--color-secondary), var(--color-ternary));
+}
+
+.course-content,
+.feature-content,
+.keybenefit-content,
+.wonder-content,
+.language-content,
+.standout-content,
+.foreignLang-content,
+.faq-content,
+.reviews-slider-wrapper {
+  padding: 110px 0;
+}
+.course-content-wrapper,
+.feature-content-wrapper,
+.keybenefit-content-wrapper,
+.wonder-content-wrapper,
+.language-content-wrapper,
+.standout-content-wrapper {
+  gap: 64px;
+}
+
+/* ---------- course ---------- */
+.course-content {
+  background: radial-gradient(ellipse at top, #ffffff 0%, var(--surface) 70%);
+}
+.course-box {
+  gap: 28px;
+}
+.course-box-img img {
+  max-width: 160px;
+  filter: drop-shadow(0 18px 24px rgba(0, 9, 73, 0.18));
+  transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.4), filter 0.5s ease;
+}
+.course-box-img:hover img {
+  transform: rotate(0deg) translateY(-14px) scale(1.06);
+  filter: drop-shadow(0 28px 30px rgba(74, 0, 225, 0.28));
+}
+
+.course-content-wrapper h1 span {
+  white-space: nowrap;
+}
+
+/* ---------- featured ---------- */
+.feature-box-wrapper {
+  gap: 40px;
+}
+.feature-box {
+  background: #fff;
+  border: 1px solid rgba(0, 9, 73, 0.06);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+  padding: 36px;
+  gap: 48px;
+  flex-wrap: nowrap;
+}
+.feature-box-img {
+  flex: 0 0 42%;
+}
+.feature-box-img {
+  display: flex;
+  justify-content: center;
+}
+.feature-box-img img {
+  max-width: 100%;
+  max-height: 440px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 24px 50px -24px rgba(0, 9, 73, 0.45);
+}
+.feature-box-text {
+  max-width: none;
+  flex: 1;
+}
+.feature-box-text h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.feature-box-text p {
+  font-size: 15.5px;
+}
+.feature-box-text a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat;
+  transition: background-size 0.3s ease;
+}
+.feature-box-text a:hover {
+  background-size: 0 1px;
+}
+
+/* ---------- key benefits ---------- */
+.keybenefit-box-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+.keybenefit-box-wrapper .tilt-wrap {
+  max-width: none;
+}
+.keybenefit-box {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 22px;
+  padding: 32px 28px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: var(--card-shadow);
+}
+.keybenefit-box img {
+  max-width: 76px;
+  height: 76px;
+  padding: 10px;
+  border-radius: 20px;
+  background: var(--surface);
+}
+.keybenefit-box p {
+  font-size: 16px;
+  color: #4b5070;
+}
+
+/* ---------- marquee spacing ---------- */
+.marquee {
+  padding: 56px 0;
+}
+
+/* ---------- linguistics ---------- */
+.linguistics-content {
+  background: linear-gradient(180deg, var(--surface), #fff);
+  padding-top: 110px;
+}
+
+/* ---------- wondering ---------- */
+.wonder-box-content {
+  gap: 24px;
+  width: 100%;
+}
+.wonder-box {
+  align-items: flex-start;
+  text-align: left;
+  gap: 14px;
+  padding: 36px 30px;
+  border-radius: 24px;
+}
+.wonder-box svg {
+  padding: 10px;
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.wonder-box h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* ---------- shared checklist (online + teach) ---------- */
+.language-box-left ul,
+.global-dream-left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.language-box-left ul li,
+.global-dream-left ul li {
+  position: relative;
+  margin: 0;
+  padding: 18px 20px 16px 62px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(0, 9, 73, 0.06);
+  box-shadow: var(--card-shadow);
+  color: #3c4163;
+  line-height: 1.55;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.language-box-left ul li:hover,
+.global-dream-left ul li:hover {
+  transform: translateX(6px);
+  box-shadow: 0 24px 40px -22px rgba(74, 0, 225, 0.4);
+}
+.language-box-left ul li::before,
+.global-dream-left ul li::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  margin-top: -14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+}
+.language-box-left ul li::after,
+.global-dream-left ul li::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 50%;
+  width: 8px;
+  height: 13px;
+  margin-top: -9px;
+  border: solid #fff;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg);
+}
+
+/* ---------- online ---------- */
+.language-box-wrapper {
+  justify-content: center;
+  gap: 72px;
+}
+.language-box-left {
+  max-width: 480px;
+}
+.language-box-right img {
+  max-width: 460px;
+}
+
+/* ---------- stand out ---------- */
+.standout-content {
+  background: var(--surface);
+}
+.standout-box-wrapper {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 48px;
+}
+.standout-box-left {
+  flex: 0 0 30%;
+  position: sticky;
+  top: 120px;
+}
+.standout-box-left img {
+  max-width: 340px;
+  width: 100%;
+}
+.standout-box-right {
+  flex: 1;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.standout-box {
+  text-align: left;
+  gap: 10px;
+  padding: 30px 28px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: var(--card-shadow);
+}
+.standout-box h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.standout-box h4::before {
+  content: "";
+  flex: 0 0 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 5px rgba(255, 65, 65, 0.15);
+}
+
+/* ---------- foreign languages ---------- */
+.foreignLang-box-title > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.foreignLang-box-title > div > h1:first-child {
+  color: var(--accent);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+.foreignLang-box-title p {
+  font-size: 17px;
+}
+.foreignLang-content-wrapper {
+  gap: 64px;
+}
+.foreignLang-box {
+  padding: 30px;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0, 9, 73, 0.06);
+}
+.foreignLang-box h3 {
+  font-weight: 800;
+  font-size: 1.35rem;
+}
+.foreignLang-box-left {
+  flex: 1;
+  max-width: 620px;
+  gap: 24px;
+}
+.language-list {
+  gap: 12px;
+}
+.language-list a {
+  padding: 10px 12px 8px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid rgba(74, 0, 225, 0.12);
+}
+.language-list a p {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.3;
+}
+.language-list a:hover {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-color: transparent;
+}
+.language-list a:hover p {
+  color: #fff;
+}
+
+/* ---------- teach / global dream ---------- */
+.global-dream-content {
+  padding: 110px 0;
+  background: linear-gradient(135deg, #f3edff 0%, #eaf8fe 100%);
+}
+.global-dream-box {
+  justify-content: center;
+  gap: 72px;
+}
+.global-dream-left {
+  gap: 28px;
+  max-width: 440px;
+  width: 100%;
+}
+.global-dream-right img {
+  max-width: 480px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 40px 70px -35px rgba(0, 9, 73, 0.5);
+}
+
+/* ---------- buttons ---------- */
+.custom-dark-btn {
+  font-weight: 600;
+  padding: 0.85em 1.8em 0.75em;
+  box-shadow: 0 12px 30px -12px rgba(255, 65, 65, 0.75);
+}
+
+/* ---------- faq ---------- */
+.faq-box-wrapper {
+  max-width: 820px;
+}
+.faq-box-wrapper .accordion {
+  --bs-accordion-border-width: 0;
+  --bs-accordion-bg: transparent;
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-active-color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.faq-box-wrapper .accordion-item {
+  background: #fff;
+  border-radius: 20px !important;
+  overflow: hidden;
+  border: 1px solid rgba(0, 9, 73, 0.07);
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.3s ease;
+}
+.faq-box-wrapper .accordion-item:has(.accordion-button:not(.collapsed)) {
+  box-shadow: 0 0 0 2px rgba(74, 0, 225, 0.18), var(--card-shadow);
+}
+.faq-box-wrapper .accordion-button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+  padding: 22px 26px 18px;
+  background: transparent;
+}
+.faq-box-wrapper .accordion-body {
+  padding: 0 26px 24px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ---------- reviews ---------- */
+.reviews-slider {
+  max-width: 560px;
+}
+.review-slide {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 9, 73, 0.06);
+  box-shadow: 0 30px 60px -30px rgba(0, 9, 73, 0.35);
+  padding: 44px 36px;
+  position: relative;
+}
+.review-slide::before {
+  content: "\201C";
+  position: absolute;
+  top: 6px;
+  left: 26px;
+  font-size: 110px;
+  line-height: 1;
+  font-weight: 800;
+  color: rgba(255, 65, 65, 0.15);
+}
+.reviews-slider .swiper-slide {
+  border-radius: var(--radius-lg);
+}
+.reviews-slider .swiper-slide-shadow-left,
+.reviews-slider .swiper-slide-shadow-right {
+  display: none;
+}
+.profile-picture img {
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 3px var(--accent);
+}
+
+/* ---------- responsive ---------- */
+@media screen and (max-width: 991px) {
+  .feature-box,
+  .feature-box-reverse {
+    flex-direction: column;
+    padding: 24px;
+    gap: 28px;
+  }
+  .feature-box-img {
+    flex: none;
+    width: 100%;
+  }
+  .keybenefit-box-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .standout-box-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .standout-box-left {
+    position: static;
+  }
+  .standout-box-left img {
+    max-width: 240px;
+  }
+  .language-box-wrapper,
+  .global-dream-box {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .course-content,
+  .feature-content,
+  .keybenefit-content,
+  .wonder-content,
+  .language-content,
+  .standout-content,
+  .foreignLang-content,
+  .faq-content,
+  .reviews-slider-wrapper,
+  .global-dream-content {
+    padding: 72px 0;
+  }
+  .language-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .keybenefit-box {
+    align-items: center;
+    text-align: center;
+  }
+}

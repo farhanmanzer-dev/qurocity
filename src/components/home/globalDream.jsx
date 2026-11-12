@@ -1,9 +1,10 @@
 import React from "react";
 import dream from "../../assets/images/online-teacher.avif";
+import Magnetic from "../motion/magnetic";
 
 const GlobalDream = () => {
   return (
-    <div className="global-dream-content">
+    <section id="teach" className="global-dream-content">
       <div className="container">
         <div className="global-dream-content-wrapper">
           <h1 data-aos="fade-down">
@@ -16,15 +17,17 @@ const GlobalDream = () => {
                 <li>Course flexibility and customization</li>
                 <li>Free demo class for any language</li>
               </ul>
-              <button className="custom-dark-btn">Register as a Teacher</button>
+              <Magnetic>
+                <button className="custom-dark-btn">Register as a Teacher</button>
+              </Magnetic>
             </div>
             <div className="global-dream-right" data-aos="fade-left">
-              <img src={dream} alt="dream" />
+              <img src={dream} alt="dream" data-parallax="40" />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

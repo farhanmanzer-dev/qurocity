@@ -97,7 +97,7 @@ const FeatureBox = () => {
           }`}
         >
           <div className="feature-box-img" data-aos="fade-right">
-            <img src={feature.imgSrc} alt={feature.altText} />
+            <img src={feature.imgSrc} alt={feature.altText} data-parallax="35" />
           </div>
           <div className="feature-box-text" data-aos="fade-left">
             {feature.content}

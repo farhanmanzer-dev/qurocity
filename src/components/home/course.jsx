@@ -17,7 +17,7 @@ const languages = [
 
 const Course = () => {
   return (
-    <div className="course-content">
+    <section id="courses" className="course-content">
       <div className="container">
         <div className="course-content-wrapper">
           <h1 data-aos="fade-down">
@@ -25,7 +25,7 @@ const Course = () => {
           </h1>
           <div className="course-box">
             {languages.map((language, index) => (
-              <div className="course-box-img" key={index} data-aos="zoom-in">
+              <div className="course-box-img hover-target" key={index} data-aos="zoom-in">
                 <img
                   src={language.src}
                   alt={language.alt}
@@ -36,7 +36,7 @@ const Course = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

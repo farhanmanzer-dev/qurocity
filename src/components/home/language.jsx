@@ -3,7 +3,7 @@ import online from "../../assets/images/online-lang.avif";
 
 const LanguageSection = () => {
   return (
-    <div className="language-content">
+    <section id="online" className="language-content">
       <div className="container">
         <div className="language-content-wrapper">
           <h1 data-aos="fade-down">
@@ -27,12 +27,12 @@ const LanguageSection = () => {
               </ul>
             </div>
             <div className="language-box-right" data-aos="fade-left">
-              <img src={online} alt="online" />
+              <img src={online} alt="online" data-parallax="50" />
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

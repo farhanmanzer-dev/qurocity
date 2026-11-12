@@ -3,7 +3,7 @@ import { Accordion } from "react-bootstrap";
 
 const Faq = () => {
   return (
-    <div className="faq-content">
+    <section id="faq" className="faq-content">
       <div className="container">
         <div className="faq-content-wrapper">
           <h1 data-aos="fade-down">Frequently Asked Questions</h1>
@@ -124,7 +124,7 @@ const Faq = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
